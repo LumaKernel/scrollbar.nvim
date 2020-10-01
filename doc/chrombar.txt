@@ -1,0 +1,94 @@
+*chrombar.txt* Chromatic Scrollbar for Neovim
+
+Original plugin |scrollbar.txt| author : Xuyuanp <https://github.com/Xuyuanp>
+Author : Luma <world@luma.email>
+License: Apache Licence 2.0 <http://www.apache.org/licenses/>
+Support: Neovim 0.5.0 and above
+Issue Tracker: https://github.com/LumaKernel/chrombar.nvim
+
+*Chrombar.nvim*
+
+                                      Type |gO| to see the table of contents.
+
+==============================================================================
+                                                             *chrombar-intro*
+Intro
+
+Display chromatic chrombar in neovim (0.5.0 or higher).
+
+==============================================================================
+                                                           *chrombar-install*
+Install
+
+Just use your favorite plugin manager. e.g. vim-plug:
+>
+  Plug 'LumaKernel/chrombar.nvim'
+<
+
+==============================================================================
+                                                            *chrombar-config*
+Config
+>
+  augroup your_config_scrollbar_nvim
+      autocmd!
+      autocmd CursorMoved,VimResized,QuitPre * silent! lua require('chrombar').show()
+      autocmd WinEnter,FocusGained           * silent! lua require('chrombar').show()
+      autocmd WinLeave,FocusLost             * silent! lua require('chrombar').clear()
+  augroup end
+<
+
+==============================================================================
+                                                           *chrombar-options*
+Options
+
+                                                        *g:chrombar_max_size*
+Set chrombar max size. By default it is set to 10.
+>
+  let g:chrombar_max_size = 10
+<
+
+                                                        *g:chrombar_min_size*
+Set chrombar min size. By default it is set to 3.
+>
+  let g:chrombar_min_size = 3
+<
+                                                    *g:chrombar_right_offset*
+Set chrombar offset from right border of window. By default it is set to 1.
+>
+  let g:chrombar_right_offset = 1
+<
+
+                                                           *g:chrombar_shape*
+Set chrombar shape. By default it is set to "{'head': '▲', 'body': '█', 'tail':
+'▼'}".
+>
+  let g:chrombar_shape = {
+    \ 'head': '▲',
+    \ 'body': '█',
+    \ 'tail': '▼',
+    \ }
+<
+
+                                                       *g:chrombar_highlight*
+Set chrombar highlight group. By default all parts are set to 'Normal'
+>
+  let g:chrombar_highlight = {
+    \ 'head': 'Normal',
+    \ 'body': 'Normal',
+    \ 'tail': 'Normal',
+    \ }
+<
+                                              *g:chrombar_excluded_filetypes*
+Set excluded filetype. By default it is set to empty.
+
+>
+  let g:chrombar_excluded_filetypes = ['nerdtree', 'tagbar']
+<
+
+                                                           *g:chrombar_width*
+Set chrombar width. By default it is set to 1.
+>
+  let g:chrombar_width = 1
+<
+
+ vim: ft=help tw=78 et ts=2 sw=2 sts=2 norl

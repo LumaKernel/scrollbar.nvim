@@ -1,9 +1,12 @@
-# scrollbar.nvim
-[![Github Action](https://img.shields.io/github/workflow/status/Xuyuanp/scrollbar.nvim/CI)](https://github.com/Xuyuanp/scrollbar.nvim/actions?query=workflow%3ACI)
-[![License](https://img.shields.io/github/license/Xuyuanp/scrollbar.nvim)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub Contributors](https://img.shields.io/github/contributors/Xuyuanp/scrollbar.nvim)](https://github.com/Xuyuanp/scrollbar.nvim/graphs/contributors)
 
-scrollbar for neovim(nightly)
+WIP and INCOMPLETED. (not implemented yet)
+
+
+# chrombar.nvim
+
+[![License](https://img.shields.io/github/license/LumaKernel/chrombar.nvim)](https://opensource.org/licenses/Apache-2.0)
+
+Chromatic chrombar for neovim (nightly).
 
 ![](doc/preview.gif)
 
@@ -12,7 +15,7 @@ scrollbar for neovim(nightly)
 Just use your favorite plugin manager. e.g. vim-plug:
 
 ```vim
-Plug 'Xuyuanp/scrollbar.nvim'
+Plug 'LumaKernel/chrombar.nvim'
 ```
 
 ## Startup
@@ -20,11 +23,11 @@ Plug 'Xuyuanp/scrollbar.nvim'
 This plugin provides only two `lua` functions, `show` and `clear`. The following config is recommended.
 
 ```vim
-augroup ScrollbarInit
+augroup ChrombarInit
   autocmd!
-  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-  autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
+  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('chrombar').show()
+  autocmd WinEnter,FocusGained           * silent! lua require('chrombar').show()
+  autocmd WinLeave,FocusLost             * silent! lua require('chrombar').clear()
 augroup end
 ```
 
@@ -32,8 +35,10 @@ augroup end
 
 ## Options
 
-See in doc `:h Scrollbar.nvim`.
+See in doc `:h chrombar.nvim`.
 
 ## Similar Projects
 
-* [minimap.vim](https://github.com/wfxr/minimap.vim) by @wfxr
+TODO
+
+* []()
